@@ -1,12 +1,12 @@
-¿Cual es el arma más barata del juego? -resp
+¿Cual es el arma más barata del juego? -AWP
 ¿Cuantos bandos existen? -resp
 ¿Cuanto tiempo se tiene para desactivar la bomba? -resp
 ¿Cuantos jugadores tiene cada equipo? -resp
-d-resp
-a-resp
-b-resp
-c-resp
-e-resp
-g-resp
-h-resp
-r-resp
+d -resp
+a -resp
+b -resp
+c -resp
+e -resp
+g -resp
+h -resp
+r -resp

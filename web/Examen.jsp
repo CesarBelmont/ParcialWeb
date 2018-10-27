@@ -33,9 +33,8 @@
             text = archivo.leer();
 
             String[] Tdividido;
-            //out.println(text[0]);
+
             Tdividido = archivo.dividir(text[0]);
-            //out.println(Tdividido[0] + " " + Tdividido[1]);
 
             String[] resp, pregunta;
             resp = new String[12];
@@ -44,13 +43,12 @@
             for (int i = 0; i < text.length; i++) {
                 Tdividido = archivo.dividir(text[i]);
                 for (int j = 0; j < 2; j++) {
-                    if (j % 2 != 0) 
+                    if (j % 2 != 0) {
                         resp[i] = Tdividido[j];
-                     else 
+                    } else {
                         pregunta[i] = Tdividido[j];
-                    
+                    }
                 }
-
             }
             for (int i = 0; i < 12; i++) {
                 out.println(pregunta[i]);
@@ -59,10 +57,10 @@
 
         %>
         <div class="card">
-            <h3 class="card-header"><% out.println(text[1]);
-                }%></h3>
+            <h3 class="card-header"><% out.println(pregunta[0]);%></h3>
             <div class="card-body">
-                <h4 class="card-title">Special title treatment</h4>
+                <h4 class="card-title"><%out.println(resp[0]);
+                    }%></h4>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <a href="#!" class="btn btn-primary">Go somewhere</a>
             </div>
