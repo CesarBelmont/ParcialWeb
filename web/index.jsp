@@ -67,7 +67,7 @@
                 <p class="lead">Nuestras certificaciones tienen diversos costos. Depende del costo el tiempo que sera valida tu certificacion.</p>
             </div>
 
-            <div class="container" style="width: 1000px">
+            <div class="container" style="width: 1200px">
                 <div class="card-deck mb-3 text-center">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-header">

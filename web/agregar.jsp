@@ -33,8 +33,9 @@
         <title>Registro</title>
     </head>
     <body>
+        <%!ArrayList<Usuario> aux ;%>
         <%
-                ArrayList<Usuario> aux = (ArrayList<Usuario>) session.getAttribute("lista");
+                aux = (ArrayList<Usuario>) session.getAttribute("lista");
                 if (request.getParameter("cuenta") != null && request.getParameter("contrasena") != null) {
                     aux.add(new Usuario(request.getParameter("cuenta"), request.getParameter("contrasena")));
                     session.setAttribute("lista", aux);

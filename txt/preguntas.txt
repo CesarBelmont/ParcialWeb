@@ -1,4 +1,12 @@
-¿Cual es el arma más barata del juego?
-¿Cuantos bandos existen?
-¿Cuanto tiempo se tiene para desactivar la bomba?
-¿Cuantos jugadores tiene cada equipo?
+¿Cual es el arma más barata del juego? -resp
+¿Cuantos bandos existen? -resp
+¿Cuanto tiempo se tiene para desactivar la bomba? -resp
+¿Cuantos jugadores tiene cada equipo? -resp
+d-resp
+a-resp
+b-resp
+c-resp
+e-resp
+g-resp
+h-resp
+r-resp
