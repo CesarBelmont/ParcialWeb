@@ -12,22 +12,37 @@
 <%
     String usuario = " ";
     String clave = " ";
+    boolean band=false;
     if (request.getParameter("usuario") != null) {
         usuario = request.getParameter("usuario");
     }
     if (request.getParameter("clave") != null) {
         clave = request.getParameter("clave");
     }
+    ArrayList<Usuario> aux = (ArrayList<Usuario>) session.getAttribute("lista");
+    for (int i = 0; i < aux.size(); i++) {
+        if (usuario.equals(aux.get(i).getNombre()) && clave.equals(aux.get(i).getClave())) {
+            band = true;
+            break;
+        } else {
+            band = false;
+        }
+    }
+    if (band == true) {
         HttpSession sesionOk = request.getSession();
+        sesionOk.setAttribute("usuario", usuario);
+        sesionOk.setAttribute("lista", aux);
 %>
-<%!ArrayList<Usuario> usr = new ArrayList();%>
+<jsp:forward page="index.jsp"/>
 <%
-    sesionOk.setAttribute("usuario", usuario);
-    sesionOk.setAttribute("lista", usr);
+} else {
 %>
 <jsp:forward page="login.jsp">
     <jsp:param name="error" value="Usuario y/o clave incorrectos.<br>Vuelve a intentarlo."/>
 </jsp:forward>
+<%
+    }
+%>
 
 <html>
     <head>

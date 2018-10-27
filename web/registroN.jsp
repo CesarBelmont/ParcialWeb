@@ -10,8 +10,8 @@
 <!DOCTYPE html>
 <%
     String cuenta=request.getParameter("cuenta");
-    String password=request.getParameter("clave");
-    ((ArrayList)application.getAttribute("aux")).add(new Usuario(cuenta,password));
+    String password=request.getParameter("contrasena");
+    ((ArrayList)session.getAttribute("lista")).add(new Usuario(cuenta,password));
     response.sendRedirect("login.jsp");
 %>
 <html>
