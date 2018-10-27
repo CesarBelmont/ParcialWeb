@@ -15,13 +15,16 @@
     </head>
     <body>
         <%
-            
+            String path = getServletContext().getRealPath("/");
             Archivos archivo = new Archivos();
-            archivo.setDireccion("C:\\Users\\ManuelDavid\\Desktop\\ParcialWeb\\txt\\preguntas.txt");
+            path += "\\..\\..\\txt\\preguntas.txt";        
+            File prueba = new File(path);
+            out.println(path);
+            archivo.setDireccion(prueba.getCanonicalPath());
             String[] text;
             text = new String [12];
             text = archivo.leer();
-            out.println(text[0]);
+            out.println(text[1]);
         %>
     </body>
 
