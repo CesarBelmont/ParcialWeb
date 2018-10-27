@@ -4,8 +4,13 @@
     Author     : ManuelDavid
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="Clases.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    application.setAttribute("aux", new ArrayList<Usuario>());
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

@@ -18,7 +18,6 @@
     if (request.getParameter("clave") != null) {
         clave = request.getParameter("clave");
     }
-    if (usuario.equals("Pollas") && clave.equals("vinagre")) {
         HttpSession sesionOk = request.getSession();
 %>
 <%!ArrayList<Usuario> usr = new ArrayList();%>
@@ -26,16 +25,10 @@
     sesionOk.setAttribute("usuario", usuario);
     sesionOk.setAttribute("lista", usr);
 %>
-<jsp:forward page="index.jsp"/>
-<%
-    }else{
-%>
-<jsp:forward page="index.jsp">
+<jsp:forward page="login.jsp">
     <jsp:param name="error" value="Usuario y/o clave incorrectos.<br>Vuelve a intentarlo."/>
 </jsp:forward>
-<%
-    }
-%>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

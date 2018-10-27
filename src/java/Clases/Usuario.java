@@ -11,11 +11,11 @@ package Clases;
  */
 public class Usuario {
     private String nombre;
-    private String usuario;
-    
-    public Usuario(){
-        this.nombre="";
-        this.usuario="";
+    private String clave;
+
+    public Usuario(String nombre, String clave) {
+        this.nombre = nombre;
+        this.clave = clave;
     }
 
     public String getNombre() {
@@ -26,11 +26,13 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getClave() {
+        return clave;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setClave(String clave) {
+        this.clave = clave;
     }
+
+    
 }
