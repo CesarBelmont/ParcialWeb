@@ -46,12 +46,17 @@
         </form>
         
         <%
-            /* SOLO PARA BORRAR EL ARRAY
+           /*
             ArrayList<Usuario> aux = (ArrayList<Usuario>) session.getAttribute("lista");
             for (int i = 0; i < aux.size(); i++) {
-                aux.remove(i);
+                out.print(aux.get(i).getNombre());
+                out.println(aux.get(i).getClave());
            }
-           */
+          
+          for (int i = 0; i < aux.size(); i++) {
+              aux.remove(i);
+          }
+          */
         %>
       
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

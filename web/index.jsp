@@ -9,7 +9,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-    application.setAttribute("aux", new ArrayList<Usuario>());
+    application.setAttribute("lista", new ArrayList<Usuario>());
 %>
 <html>
     <head>

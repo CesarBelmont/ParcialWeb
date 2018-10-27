@@ -9,17 +9,21 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>
 <!DOCTYPE html>
+<%!
+    ArrayList<Usuario> aux;
+%>
 <%
     String usuario = " ";
     String clave = " ";
-    boolean band=false;
+    boolean band = false;
     if (request.getParameter("usuario") != null) {
         usuario = request.getParameter("usuario");
     }
     if (request.getParameter("clave") != null) {
         clave = request.getParameter("clave");
     }
-    ArrayList<Usuario> aux = (ArrayList<Usuario>) session.getAttribute("lista");
+    //if(usuario.equals("Ximena")&& clave.equals("hola")){
+    aux = (ArrayList<Usuario>) session.getAttribute("lista");
     for (int i = 0; i < aux.size(); i++) {
         if (usuario.equals(aux.get(i).getNombre()) && clave.equals(aux.get(i).getClave())) {
             band = true;
