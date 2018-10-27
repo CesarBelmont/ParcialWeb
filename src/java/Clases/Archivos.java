@@ -15,7 +15,8 @@ import java.io.IOException;
  * @author ManuelDavid
  */
 public class Archivos {
-    private String direccion,texto;
+
+    private String direccion, texto;
 
     public String getDireccion() {
         return direccion;
@@ -24,14 +25,15 @@ public class Archivos {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    String [] preguntas;
+    String[] preguntas;
+
     public String[] leer() throws FileNotFoundException, IOException {
-        String cadena,temp = "";
-        int i=0;
+        String cadena, temp = "";
+        int i = 0;
         preguntas = new String[12];
         BufferedReader b = new BufferedReader(new FileReader(direccion));
         while ((cadena = b.readLine()) != null) {
-            temp = temp + cadena + "<br>";
+            temp = cadena + "<br>";
             preguntas[i] = temp;
             i++;
         }

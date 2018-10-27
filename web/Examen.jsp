@@ -19,7 +19,6 @@
             Archivos archivo = new Archivos();
             path += "\\..\\..\\txt\\preguntas.txt";        
             File prueba = new File(path);
-            out.println(path);
             archivo.setDireccion(prueba.getCanonicalPath());
             String[] text;
             text = new String [12];

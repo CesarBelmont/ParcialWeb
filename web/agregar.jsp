@@ -15,7 +15,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style>
             body{
-                background-color: beige;
+                background-color: #FEFDEF;
             }
         </style>
         <script>
@@ -46,20 +46,14 @@
                 <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
                 <h1 class="h3 mb-3 font-weight-normal">Registro de usuario</h1>
             </div>
-
             <div class="form-label-group">
                 <input name="cuenta" type="text" id="inputEmail" class="form-control" placeholder="Cuenta" required autofocus>
-
             </div>
-
             <div class="form-label-group">
                 <input  name="contrasena" type="password" id="inputPassword" class="form-control mt-2" placeholder="Contraseña" required>
-
             </div>
-
             <div class="form-label-group">
                 <input  name="contrasena2" type="password" id="inputPassword" class="form-control mt-2" placeholder="Confirmar contraseña" required>
-
             </div>
             <button class="btn btn-lg btn-primary btn-block mt-5" type="submit">Agregar</button>
             <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>

@@ -16,7 +16,7 @@
         <title>JSP Page</title>
         <style>
             body{
-                background-color:beige;
+                background-color:#FEFDEF;
             }
         </style>
 
