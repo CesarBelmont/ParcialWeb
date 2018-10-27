@@ -15,15 +15,23 @@
     </head>
     <body>
         <%
-            String path = getServletContext().getRealPath("/");
-            Archivos archivo = new Archivos();
-            path += "\\..\\..\\txt\\preguntas.txt";        
-            File prueba = new File(path);
-            archivo.setDireccion(prueba.getCanonicalPath());
-            String[] text;
-            text = new String [12];
-            text = archivo.leer();
-            out.println(text[1]);
+            if (session.getAttribute("usuario") == null) {
+        %>
+        <jsp:forward page="login.jsp">
+            <jsp:param name="error" value="Es obligatorio identificarse"/>
+        </jsp:forward>
+        <%
+            } else {
+                String path = getServletContext().getRealPath("/");
+                Archivos archivo = new Archivos();
+                path += "\\..\\..\\txt\\preguntas.txt";
+                File prueba = new File(path);
+                archivo.setDireccion(prueba.getCanonicalPath());
+                String[] text;
+                text = new String[12];
+                text = archivo.leer();
+                out.println(text[1]);
+            }
         %>
     </body>
 
