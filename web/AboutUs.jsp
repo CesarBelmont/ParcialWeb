@@ -68,7 +68,9 @@
                         %>
                         <div class="d-flex flex-column flex-md-row mb-2 px-md-0 mt-2">
                             <a class="btn btn-primary" href="cerrarsesion.jsp">Cerrar sesion</a>
+                            
                         </div>
+                        <p class="lead" style="color: white;">Bienvenid@: <%=session.getAttribute("usuario")%></p>
                         <%}%>
                     </li>
                 </ul>

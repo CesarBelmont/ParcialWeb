@@ -4,6 +4,12 @@
     Author     : ManuelDavid
 --%>
 
+
+
+
+<%@page import="java.util.Collections"%>
+<%@page import="java.util.Vector"%>
+<%@page import="java.util.concurrent.ThreadLocalRandom"%>
 <%@page import="java.util.TreeMap"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.io.File"%>
@@ -72,18 +78,80 @@
                     }
                 }
             }
+
+            Vector<Integer> res = new Vector<Integer>();
+            for (int i = 0; i < 4; i++) {
+                res.add(i);
+            }
+            Collections.shuffle(res);
+            Vector<Integer> pre = new Vector<Integer>();
+            for (int i = 0; i < 12; i++) {
+                pre.add(i);
+            }
+            Collections.shuffle(pre);
+            out.println(pre.get(0));
+
         %>
         <div class="card">
-            <h3 class="card-header"><% out.println(preguntas.get(0));%></h3>
+            <h3 class="card-header">
+                <%out.println(preguntas.get(pre.get(0)));
+                %>
+            </h3>
             <div class="card-body">
-                <h4 class="card-title">
-                    <%
-                            out.println(mal.get(4));
-                            out.println(correctas.get(0));
-                        }
-                    %>
-                </h4>
-                <a href="#!" class="btn btn-primary">Go somewhere</a>
+                <form action="Examen.jsp">
+                    <h4 class="card-title">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">
+                                <%                                if (res.get(0) == 0) {
+                                        out.println(correctas.get(pre.get(0)));
+                                    } else {
+                                        out.println(mal.get(1));
+                                    }
+
+                                %></label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">
+                                <%                                if (res.get(1) == 0) {
+                                        out.println(correctas.get(pre.get(0)));
+                                    } else {
+                                        out.println(mal.get(1));
+                                    }
+                                %>
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio3">
+                                <%
+                                    if (res.get(2) == 0) {
+                                        out.println(correctas.get(pre.get(0)));
+                                    } else {
+                                        out.println(mal.get(1));
+                                    }
+                                %>
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio4">
+                                <%
+                                    if (res.get(3) == 0) {
+                                        out.println(correctas.get(pre.get(0)));
+                                    } else {
+                                        out.println(mal.get(1));
+                                    }
+                                %>
+                            </label>
+                        </div>
+                        <%
+                            }
+                        %>
+                    </h4>
+                    <input type="submit" value="Siguente" class="btn btn-primary">
+                </form>
             </div>
         </div>           
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
