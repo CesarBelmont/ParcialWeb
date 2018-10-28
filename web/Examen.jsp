@@ -39,6 +39,7 @@
         <jsp:forward page="login.jsp">
             <jsp:param name="error" value="Es obligatorio identificarse"/>
         </jsp:forward>
+        <%! String aux = "";%>
         <%
         } else {
             Map<Integer, String> preguntas = new TreeMap<Integer, String>();
@@ -60,6 +61,7 @@
             text2 = new String[36];
             text2 = file.leer(36);
             String[] Tdividido;
+           
             for (int i = 0; i < text.length; i++) {
                 Tdividido = archivo.dividir(text[i]);
                 for (int j = 0; j < 2; j++) {
@@ -95,57 +97,113 @@
         <div class="card">
             <h3 class="card-header">
                 <%out.println(preguntas.get(pre.get(0)));
+
                 %>
             </h3>
             <div class="card-body">
                 <form action="Examen.jsp">
                     <h4 class="card-title">
+                        <%                            if (res.get(0) == 0) {
+                        %>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(0))%>">
                             <label class="custom-control-label" for="customRadio1">
-                                <%                                if (res.get(0) == 0) {
-                                        out.println(correctas.get(pre.get(0)));
-                                    } else {
-                                        out.println(mal.get(1));
-                                    }
-
-                                %></label>
+                                <%out.println(correctas.get(pre.get(0)));%>
+                            </label>
                         </div>
+                        <%
+                        } else {
+                        %>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="<%=mal.get(0)%>">
+                            <label class="custom-control-label" for="customRadio1">
+                                <%out.println(mal.get(0));%>
+                            </label>
+                        </div>
+                        <%
+                            }
+                        %>
+                        <%
+                            if (res.get(1) == 0) {
+                        %>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(0))%>">
                             <label class="custom-control-label" for="customRadio2">
-                                <%                                if (res.get(1) == 0) {
-                                        out.println(correctas.get(pre.get(0)));
-                                    } else {
-                                        out.println(mal.get(1));
-                                    }
-                                %>
+                                <%out.println(correctas.get(pre.get(0)));%>
                             </label>
                         </div>
+                        <%
+                        } else {
+                        %>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input"value="<%=mal.get(1)%>">
+                            <label class="custom-control-label" for="customRadio2">
+                                <%out.println(mal.get(1));%>
+                            </label>
+                        </div>
+                        <%
+                            }
+                        %>
+                        <%
+                            if (res.get(2) == 0) {
+                        %>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(0))%>">
                             <label class="custom-control-label" for="customRadio3">
-                                <%
-                                    if (res.get(2) == 0) {
-                                        out.println(correctas.get(pre.get(0)));
-                                    } else {
-                                        out.println(mal.get(1));
-                                    }
-                                %>
+                                <%out.println(correctas.get(pre.get(0)));%>
                             </label>
                         </div>
+                        <%
+                        } else {
+                        %>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio4">
-                                <%
-                                    if (res.get(3) == 0) {
-                                        out.println(correctas.get(pre.get(0)));
-                                    } else {
-                                        out.println(mal.get(1));
-                                    }
-                                %>
+                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input"value="<%=mal.get(2)%>">
+                            <label class="custom-control-label" for="customRadio3">
+                                <%out.println(mal.get(2));%>
                             </label>
                         </div>
+                        <%
+                            }
+                        %>
+                        <%
+                            if (res.get(3) == 0) {
+                        %>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(0))%>">
+                            <label class="custom-control-label" for="customRadio4">
+                                <%out.println(correctas.get(pre.get(0)));%>
+                            </label>
+                        </div>
+                        <%
+                        } else {
+                        %>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input"value="<%=mal.get(3)%>">
+                            <label class="custom-control-label" for="customRadio4">
+                                <%out.println(mal.get(3));%>
+                            </label>
+                        </div>
+                        <%
+                            }
+
+                            if (aux == "") {
+                                aux = correctas.get(pre.get(0));
+                            } else {
+                                
+                            }
+                            if (request.getParameter("customRadio").equals(aux)) {
+
+                                out.println("bien");
+                                    
+                            } else {
+                                out.println("mal");
+                                
+                            }
+                            
+                            out.println("radio: "+request.getParameter("customRadio"));
+                            out.println("aiuda: "+aux);
+                            out.println(correctas.get(pre.get(0)));
+                        %>
                         <%
                             }
                         %>
