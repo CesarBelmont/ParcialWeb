@@ -12,9 +12,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <title>JSP Page</title>
+        <title>Inicio</title>
         <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-        <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+        <link href="images/farolito.png" rel="icon" type="image/x-icon" />
         <style>
             *{
                 font-family: 'Dosis', sans-serif;
@@ -25,7 +25,7 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark" style=" width: 100%;">
+        <nav class="navbar navbar-dark bg-dark">
             <img class="mb-2 ml-5" src="images/farolito.png" alt="" width=60" height="60" style="filter: invert(100%);">
             <p class="lead navbar-toggler"  data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation"  style="color: white; border: transparent;">CERTIFICACIONES EL FAROLITO</p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,7 +78,7 @@
             <p class="lead">Nuestras certificaciones tienen diversos costos. Depende del costo el tiempo que sera valida tu certificacion.</p>
         </div>  
 
-        <div class="container" style="width: 1200px">
+        <div class="container">
             <div class="card-deck mb-3 text-center">
                 <div class="card mb-5 shadow-sm">
                     <div class="card-header">
