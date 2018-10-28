@@ -11,7 +11,7 @@
     HttpSession sesionOk = request.getSession();
     sesionOk.invalidate();
 %>
-<jsp:forward page="login.jsp"/>
+<jsp:forward page="index.jsp"/>
 <!DOCTYPE html>
 <html>
     <head>

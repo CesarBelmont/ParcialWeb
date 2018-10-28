@@ -21,8 +21,9 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">CERTIFICACIONES EL FAROLITO</a>
+        <nav class="navbar navbar-dark bg-dark" style=" width: 100%;">
+            <img class="mb-2 ml-5" src="images/farolito.png" alt="" width=60" height="60" style="filter: invert(100%);">
+            <p class="lead" style=" color: white;">CERTIFICACIONES EL FAROLITO</p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,98 +49,100 @@
                 </ul>
             </div>
         </nav>
-            <%
-                if(session.getAttribute("usuario")==null){
-            %>
-            <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-#FEFDEF border-bottom shadow-sm">
-                <a class="btn btn-outline-primary" href="login.jsp">Iniciar sesión</a>
-            </div>
-            <%
-                }else{  
-            %>
-            <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-#FEFDEF border-bottom shadow-sm">
-                <a class="btn btn-outline-primary" href="cerrarsesion.jsp">Cerrar sesion</a>
-            </div>
-            <%}%>
+        <%
+            if (session.getAttribute("usuario") == null) {
+        %>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-#FEFDEF border-bottom shadow-sm">
+            <a class="btn btn-outline-primary" href="login.jsp">Iniciar sesión</a>
+        </div>
+        <%
+        } else {
+        %>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-#FEFDEF border-bottom shadow-sm" style=" text-align: right;">
+            <a class="btn btn-outline-primary" href="cerrarsesion.jsp">Cerrar sesion</a>
+            <p class="lead" style=" padding-left: 10px;">Bienvenid@: <%=session.getAttribute("usuario")%></p>
+        </div>
+        <%}%>
 
-            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                <h1 class="display-4">Costos</h1>
-                <p class="lead">Nuestras certificaciones tienen diversos costos. Depende del costo el tiempo que sera valida tu certificacion.</p>
-            </div>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">Costos</h1>
+            <p class="lead">Nuestras certificaciones tienen diversos costos. Depende del costo el tiempo que sera valida tu certificacion.</p>
+        </div>  
 
-            <div class="container" style="width: 1200px">
-                <div class="card-deck mb-3 text-center">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Gratis</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$0 <small class="text-muted"></small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>1 año de certificado valido.</li>
-                                <li>Calificacion minima aprobatoria: 6.</li>
-                                <li>Total de preguntas: 5.</li>
-                                <li>Tiempo limite para respoder: 15 min.</li>
-                            </ul>
-                            <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
-                        </div>
+        <div class="container" style="width: 1200px">
+            <div class="card-deck mb-3 text-center">
+                <div class="card mb-5 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Gratis</h4>
                     </div>
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Simple</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$1500 <small class="text-muted"></small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>2 años de certificado valido.</li>
-                                <li>Calificacion minima aprobatoria: 7.</li>
-                                <li>Total de preguntas: 5.</li>
-                                <li>Tiempo limite para respoder: 15 min.</li>
-                            </ul>
-                            <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
-                        </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$0 <small class="text-muted"></small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>1 año de certificado valido.</li>
+                            <li>Calificacion minima aprobatoria: 6.</li>
+                            <li>Total de preguntas: 5.</li>
+                            <li>Tiempo limite para respoder: 15 min.</li>
+                        </ul>
+                        <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
                     </div>
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Profesional</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$3000 <small class="text-muted"></small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>5 años de certificado valido.</li>
-                                <li>Calificacion minima aprobatoria: 8.</li>
-                                <li>Total de preguntas: 8.</li>
-                                <li>Tiempo limite para respoder: 30 min.</li>
-                            </ul>
-                            <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
-                        </div>
+                </div>
+                <div class="card mb-5 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Simple</h4>
                     </div>
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Master</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$5000 <small class="text-muted"></small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>10 años de certificado valido.</li>
-                                <li>Calificacion minima aprobatoria: 10.</li>
-                                <li>Total de preguntas: 8.</li>
-                                <li>Tiempo limite para respoder: 30 min.</li>
-                            </ul>
-                            <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
-                        </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$1500 <small class="text-muted"></small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>2 años de certificado valido.</li>
+                            <li>Calificacion minima aprobatoria: 7.</li>
+                            <li>Total de preguntas: 5.</li>
+                            <li>Tiempo limite para respoder: 15 min.</li>
+                        </ul>
+                        <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
+                    </div>
+                </div>
+                <div class="card mb-5 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Profesional</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$3000 <small class="text-muted"></small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>5 años de certificado valido.</li>
+                            <li>Calificacion minima aprobatoria: 8.</li>
+                            <li>Total de preguntas: 8.</li>
+                            <li>Tiempo limite para respoder: 30 min.</li>
+                        </ul>
+                        <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
+                    </div>
+                </div>
+                <div class="card mb-5 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Master</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$5000 <small class="text-muted"></small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>10 años de certificado valido.</li>
+                            <li>Calificacion minima aprobatoria: 10.</li>
+                            <li>Total de preguntas: 8.</li>
+                            <li>Tiempo limite para respoder: 30 min.</li>
+                        </ul>
+                        <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
                     </div>
                 </div>
             </div>
+        </div>
 
 
-        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <footer class="pt-4 pt-md-5 border-top bg-dark mt-5">
             <div class="row">
-                <div class="col-12 col-md">
-                    <img class="mb-2" src="../../assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-                    <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+                <div class="col-12 col-md" style=" text-align: right;">
+                    <img class="mb-2 ml-5" src="images/farolito.png" alt="" width="90" height="90" style="filter: invert(100%);">
+
                 </div>
                 <div class="col-6 col-md">
+
                     <h5>Features</h5>
                     <ul class="list-unstyled text-small">
                         <li><a class="text-muted" href="#">Cool stuff</a></li>
@@ -171,6 +174,7 @@
             </div>
         </footer>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

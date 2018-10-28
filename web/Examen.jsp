@@ -34,8 +34,6 @@
 
             String[] Tdividido;
 
-            Tdividido = archivo.dividir(text[0]);
-
             String[] resp, pregunta;
             resp = new String[12];
             pregunta = new String[12];
@@ -50,15 +48,23 @@
                     }
                 }
             }
-            for (int i = 0; i < 12; i++) {
+            /*for (int i = 0; i < 12; i++) {
                 out.println(pregunta[i]);
                 out.println("<br>" + resp[i]);
-            }
+            }*/
 
         %>
         <div class="card">
             <h3 class="card-header"><% out.println(pregunta[0]);%></h3>
             <div class="card-body">
+                <form action="Examen.jsp">
+                    <input type="radio" name="valor" value="valor1">Hola<br>
+                    <input type="radio" name="valor" value="valor2">1<br>
+                    <input type="radio" name="valor" value="valor3">2<br>
+                    <input type="radio" name="valor" value="valor4">3<br>
+                    <input type="submit" value="boton">
+                </form>
+
                 <h4 class="card-title"><%out.println(resp[0]);
                     }%></h4>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
