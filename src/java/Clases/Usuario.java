@@ -10,6 +10,7 @@ package Clases;
  * @author César
  */
 public class Usuario {
+
     private String nombre;
     private String clave;
 
@@ -34,5 +35,4 @@ public class Usuario {
         this.clave = clave;
     }
 
-    
 }

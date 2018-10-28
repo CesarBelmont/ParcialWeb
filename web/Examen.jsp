@@ -48,11 +48,6 @@
                     }
                 }
             }
-            /*for (int i = 0; i < 12; i++) {
-                out.println(pregunta[i]);
-                out.println("<br>" + resp[i]);
-            }*/
-
         %>
         <div class="card">
             <h3 class="card-header"><% out.println(pregunta[0]);%></h3>

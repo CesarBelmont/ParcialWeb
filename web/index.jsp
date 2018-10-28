@@ -47,19 +47,22 @@
                         </div>
                     </li>
                 </ul>
+
             </div>
+
         </nav>
         <%
             if (session.getAttribute("usuario") == null) {
         %>
-        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-#FEFDEF border-bottom shadow-sm">
-            <a class="btn btn-outline-primary" href="login.jsp">Iniciar sesión</a>
+
+        <div class="d-flex flex-column flex-md-row p-3 px-md-4 mb-3 bg-#FEFDEF border-bottom shadow-sm ">
+            <a class="btn btn-primary" href="login.jsp">Iniciar sesión</a>
         </div>
         <%
         } else {
         %>
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-#FEFDEF border-bottom shadow-sm" style=" text-align: right;">
-            <a class="btn btn-outline-primary" href="cerrarsesion.jsp">Cerrar sesion</a>
+            <a class="btn btn-primary" href="cerrarsesion.jsp">Cerrar sesion</a>
             <p class="lead" style=" padding-left: 10px;">Bienvenid@: <%=session.getAttribute("usuario")%></p>
         </div>
         <%}%>
@@ -135,7 +138,7 @@
         </div>
 
 
-        <footer class="pt-4 pt-md-5 border-top bg-dark mt-5">
+        <footer class="pt-4 pt-md-5 border-top bg-dark mt-5 container-fluid">
             <div class="row">
                 <div class="col-12 col-md" style=" text-align: right;">
                     <img class="mb-2 ml-5" src="images/farolito.png" alt="" width="90" height="90" style="filter: invert(100%);">
@@ -173,10 +176,9 @@
                 </div>
             </div>
         </footer>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
 </html>
