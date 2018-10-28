@@ -13,6 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <title>JSP Page</title>
+        <link href="images/favicon.png" rel="icon" type="image/x-icon" />
         <style>
             body{
                 background-color: #FEFDEF;
@@ -31,30 +32,32 @@
             <div class="collapse navbar-collapse" id="navbarsExample01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="AboutUs.jsp">Sobre nosotros</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Certificacion en Tecnologías</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="#">Programación</a>
+                            <a class="dropdown-item" href="#">Electrónica</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Certificaiones</a>
+                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Certificacion en Videojuegos</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Tecnologias</a>
-                            <a class="dropdown-item" href="#">Videojuegos</a>
+                            <a class="dropdown-item" href="Examen.jsp">Counter Strike: Global Offensive</a>
+                            <a class="dropdown-item" href="#">Fortnite</a>
                         </div>
                     </li>
                 </ul>
-
             </div>
-
         </nav>
         <%
             if (session.getAttribute("usuario") == null) {
         %>
-
         <div class="d-flex flex-column flex-md-row p-3 px-md-4 mb-3 bg-#FEFDEF border-bottom shadow-sm ">
             <a class="btn btn-primary" href="login.jsp">Iniciar sesión</a>
         </div>
@@ -76,7 +79,7 @@
             <div class="card-deck mb-3 text-center">
                 <div class="card mb-5 shadow-sm">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Gratis</h4>
+                        <h4 class="my-0 font-weight-normal">Counter Strike: GO</h4>
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">$0 <small class="text-muted"></small></h1>
@@ -91,7 +94,7 @@
                 </div>
                 <div class="card mb-5 shadow-sm">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Simple</h4>
+                        <h4 class="my-0 font-weight-normal">Fortnite</h4>
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">$1500 <small class="text-muted"></small></h1>
@@ -101,12 +104,12 @@
                             <li>Total de preguntas: 5.</li>
                             <li>Tiempo limite para respoder: 15 min.</li>
                         </ul>
-                        <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
+                        <a href="#"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
                     </div>
                 </div>
                 <div class="card mb-5 shadow-sm">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Profesional</h4>
+                        <h4 class="my-0 font-weight-normal">Programación</h4>
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">$3000 <small class="text-muted"></small></h1>
@@ -116,12 +119,12 @@
                             <li>Total de preguntas: 8.</li>
                             <li>Tiempo limite para respoder: 30 min.</li>
                         </ul>
-                        <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
+                        <a href="#"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
                     </div>
                 </div>
                 <div class="card mb-5 shadow-sm">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Master</h4>
+                        <h4 class="my-0 font-weight-normal">Electrónica</h4>
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">$5000 <small class="text-muted"></small></h1>
@@ -131,7 +134,7 @@
                             <li>Total de preguntas: 8.</li>
                             <li>Tiempo limite para respoder: 30 min.</li>
                         </ul>
-                        <a href="Examen.jsp"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
+                        <a href="#"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Comenzar</button></a>
                     </div>
                 </div>
             </div>
