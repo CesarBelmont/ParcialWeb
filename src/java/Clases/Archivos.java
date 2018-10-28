@@ -27,10 +27,10 @@ public class Archivos {
     }
     String[] preguntas;
 
-    public String[] leer() throws FileNotFoundException, IOException {
+    public String[] leer(int n) throws FileNotFoundException, IOException {
         String cadena, temp = "";
         int i = 0;
-        preguntas = new String[12];
+        preguntas = new String[n];
         BufferedReader b = new BufferedReader(new FileReader(direccion));
         while ((cadena = b.readLine()) != null) {
             temp = cadena + "<br>";
