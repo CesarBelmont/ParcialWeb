@@ -13,18 +13,21 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <title>JSP Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
         <style>
+            *{
+                font-family: 'Dosis', sans-serif;
+            }
             body{
                 background-color: #FEFDEF;
             }
-
         </style>
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark" style=" width: 100%;">
             <img class="mb-2 ml-5" src="images/farolito.png" alt="" width=60" height="60" style="filter: invert(100%);">
-            <p class="lead" style=" color: white;">CERTIFICACIONES EL FAROLITO</p>
+            <p class="lead navbar-toggler"  data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation"  style="color: white; border: transparent;">CERTIFICACIONES EL FAROLITO</p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -139,8 +142,6 @@
                 </div>
             </div>
         </div>
-
-
         <footer class="pt-4 pt-md-5 border-top bg-dark mt-5 container-fluid">
             <div class="row">
                 <div class="col-12 col-md" style=" text-align: right;">
@@ -153,10 +154,10 @@
                     <ul class="list-unstyled text-small">
                         <li><a class="text-muted" href="#">Cool stuff</a></li>
                         <li><a class="text-muted" href="#">Random feature</a></li>
-                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="AboutUs.jsp">Team feature</a></li>
                         <li><a class="text-muted" href="#">Stuff for developers</a></li>
                         <li><a class="text-muted" href="#">Another one</a></li>
-                        <li><a class="text-muted" href="#">Last time</a></li>
+                        
                     </ul>
                 </div>
                 <div class="col-6 col-md">
@@ -171,10 +172,10 @@
                 <div class="col-6 col-md">
                     <h5>About</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Team</a></li>
-                        <li><a class="text-muted" href="#">Locations</a></li>
-                        <li><a class="text-muted" href="#">Privacy</a></li>
-                        <li><a class="text-muted" href="#">Terms</a></li>
+                        <li><a class="text-muted" href="AboutUs.jsp">Team</a></li>
+                        <li><a class="text-muted" href="AboutUs.jsp">Locations</a></li>
+                        <li><a class="text-muted" href="AboutUs.jsp">Privacy</a></li>
+                        <li><a class="text-muted" href="AboutUs.jsp">Terms</a></li>
                     </ul>
                 </div>
             </div>

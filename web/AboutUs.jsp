@@ -11,7 +11,16 @@
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            *{
+                font-family: 'Dosis', sans-serif;
+            }
+            body{
+                background-color: #FEFDEF;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -19,7 +28,7 @@
         </header>
         <nav class="navbar navbar-dark bg-dark" style=" width: 100%;">
             <a href="index.jsp"><img class="mb-2 ml-5" src="images/farolito.png" alt="" width=60" height="60" style="filter: invert(100%);"></a>
-            <p class="lead" style=" color: white;">CERTIFICACIONES EL FAROLITO</p>
+            <p class="lead navbar-toggler"  data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation"  style="color: white; border: transparent;">CERTIFICACIONES EL FAROLITO</p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -74,6 +83,7 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -84,6 +94,9 @@
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="images/programacion.png" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/electronica.png" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -104,9 +117,9 @@
                         <img class="rounded-circle" src="images/MD.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Manuel David Alonso Muñoz</h2>
                         <p>Estudiante de Ing. en Sistemas Computacionales.</p>
-                        
+
                     </div>
-                    
+
                     <div class="col-lg-6">
                         <img class="rounded-circle" src="images/Rea.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Cesar Arturo Rea Reyes</h2>
@@ -132,7 +145,7 @@
                         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                     </div>
                     <div class="col-md-5 order-md-1">
-                        
+
                         <img class="featurette-image img-fluid mx-auto" src="images/certificacion.png" alt="Generic placeholder image">
                     </div>
                 </div>
@@ -145,7 +158,7 @@
                         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                     </div>
                     <div class="col-md-5">
-   
+
                         <img class="featurette-image img-fluid mx-auto" src="images/diploma.jpg" alt="Generic placeholder image" width="40%">
                     </div>
                 </div>
