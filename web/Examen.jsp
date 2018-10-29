@@ -40,6 +40,10 @@
             <jsp:param name="error" value="Es obligatorio identificarse"/>
         </jsp:forward>
         <%! String aux = "";%>
+        <%! boolean band = false;%>
+        <%! Vector<Integer> res = new Vector<Integer>();%>
+        <%! Vector<Integer> pre = new Vector<Integer>();%>
+        <%! int i = 0;%>
         <%
         } else {
             Map<Integer, String> preguntas = new TreeMap<Integer, String>();
@@ -61,7 +65,6 @@
             text2 = new String[36];
             text2 = file.leer(36);
             String[] Tdividido;
-           
             for (int i = 0; i < text.length; i++) {
                 Tdividido = archivo.dividir(text[i]);
                 for (int j = 0; j < 2; j++) {
@@ -80,30 +83,34 @@
                     }
                 }
             }
-            Vector<Integer> res = new Vector<Integer>();
-            for (int i = 0; i < 4; i++) {
-                res.add(i);
+            if (!band) {
+                for (int i = 0; i < 4; i++) {
+                    res.add(i);
+                }
             }
             Collections.shuffle(res);
-            Vector<Integer> pre = new Vector<Integer>();
-            for (int i = 0; i < 12; i++) {
-                pre.add(i);
+            if (!band) {
+
+                for (int i = 0; i < 12; i++) {
+                    pre.add(i);
+                }
+                band = true;
+                Collections.shuffle(pre);
             }
-            Collections.shuffle(pre);
-            //out.println(pre.get(0));
+           
         %>
         <div class="card">
             <h3 class="card-header">
-                <%out.println(preguntas.get(pre.get(0)));%>
+                <%out.println(preguntas.get(pre.get(i)));%>
             </h3>
             <div class="card-body">
                 <form action="Examen.jsp">
                     <h4 class="card-title">
                         <%if (res.get(0) == 0) {%>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(0))%>">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(i))%>">
                             <label class="custom-control-label" for="customRadio1">
-                                <%out.println(correctas.get(pre.get(0)));%>
+                                <%out.println(correctas.get(pre.get(i)));%>
                             </label>
                         </div>
                         <%} else {%>
@@ -116,9 +123,9 @@
                         <%}%>
                         <%if (res.get(1) == 0) {%>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(0))%>">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(i))%>">
                             <label class="custom-control-label" for="customRadio2">
-                                <%out.println(correctas.get(pre.get(0)));%>
+                                <%out.println(correctas.get(pre.get(i)));%>
                             </label>
                         </div>
                         <%} else {%>
@@ -131,9 +138,9 @@
                         <%}%>
                         <%if (res.get(2) == 0) {%>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(0))%>">
+                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(i))%>">
                             <label class="custom-control-label" for="customRadio3">
-                                <%out.println(correctas.get(pre.get(0)));%>
+                                <%out.println(correctas.get(pre.get(i)));%>
                             </label>
                         </div>
                         <%} else {%>
@@ -144,11 +151,12 @@
                             </label>
                         </div>
                         <%}%>
-                       <%if (res.get(3) == 0) {%>
+                        <%if (res.get(3) == 0) {%>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(0))%>">
+                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(i))%>">
+
                             <label class="custom-control-label" for="customRadio4">
-                                <%out.println(correctas.get(pre.get(0)));%>
+                                <%out.println(correctas.get(pre.get(i)));%>
                             </label>
                         </div>
                         <%} else {%>
@@ -159,12 +167,43 @@
                             </label>
                         </div>
                         <%}
-                            
+                            int contador=0;
+                            String siguiente = "";
+                            String respuesta = request.getParameter("customRadio");
+                            if (i == 0) {
+                                siguiente = correctas.get(pre.get(i));
+                            } else {
+                                siguiente = correctas.get(pre.get(i - 1));
+                            }
+                            session.setAttribute("usr", siguiente);
+                            //out.println("correcta " + siguiente);
+
+
+                            // out.println("ciclo " + i);
+                            // out.println("Respuesta " + correctas.get(pre.get(i)));
+                            i++;
+                            //  out.println("Respuesta " + correctas.get(pre.get(i - 1)));
+                            //   out.println("Yo mande " + respuesta);
+                            out.println("respuesta actual " + siguiente);
+                            out.println("respuesta anterior " + respuesta);
+                            if (siguiente.equals(respuesta)) {
+                                out.println("bien");
+                                contador++;
+                            } else {
+                                out.println("mal");
+                            }
+                            if(i==5){
+                            response.sendRedirect("calificacion.jsp");
+                            session.setAttribute("contador", contador);
+}
                         %>
-                        <%}%>
+
                     </h4>
                     <input type="submit" value="Siguente" class="btn btn-primary">
+
                 </form>
+                <%                            }//cierra else de hasta arriba
+                %>
             </div>
         </div>           
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

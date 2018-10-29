@@ -4,7 +4,7 @@
 ¿Cuantos jugadores tiene cada equipo? -5
 ¿Cúal es el precio de un rifle M4A1 S? -3100
 ¿Cúal es el código de la bomba? -7355608
-¿Qué ventaja tienen los Terroristas sobre los Anti Terroristas? -Sus armas son más poderosas y baratas
+¿Qué ventaja tienen los Terroristas sobre los Anti Terroristas? -Sus armas son mas poderosas y baratas
 ¿Que equipo ganó el torneo ESL One: Cologne 2015? -Fnatic
 ¿Cuánto dinero consigues como Anti Terrorista por ganar la ronda al acabarse por tiempo sin que se plante la bomba? -3250
 ¿Cómo se llamó la primera operación? -Payback
