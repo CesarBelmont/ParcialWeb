@@ -118,21 +118,21 @@
                     <div class="col-lg-6">
                         <img class="rounded-circle" src="images/MD.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Manuel David Alonso Muñoz</h2>
-                        <p>Estudiante de Ing. en Sistemas Computacionales.</p>
+                        <p>Estudiante de Ing. en Sistemas Computacionales. El cual necesitó un dia mas para terminar este examen. </p>
 
                     </div>
 
                     <div class="col-lg-6">
                         <img class="rounded-circle" src="images/Rea.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Cesar Arturo Rea Reyes</h2>
-                        <p>Estudiante de Ing. en Sistemas Computacionales.</p>
+                        <p>Estudiante de Ing. en Sistemas Computacionales. No se movió de su silla por 3 dias, para terminar este examen.</p>
                     </div>
                 </div>
                 <hr class="featurette-divider">
                 <div class="row featurette">
                     <div class="col-md-7">
-                        <h2 class="featurette-heading">Aclaraciones de la certificación</h2>
-                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                        <h2 class="featurette-heading">Sobre la empresa</h2>
+                        <p class="lead">Somos una empresa que realiza certificaciones en diversas categorias. ¿Eres un apasionado de los juegos? Pues certificate con nosotros tambien en tus juegos favoritos!</p>
                     </div>
                     <div class="col-md-5">
                         <img class="featurette-image img-fluid mx-auto" src="images/servidor_cliente.jpg" alt="Generic placeholder image">
@@ -144,7 +144,7 @@
                 <div class="row featurette">
                     <div class="col-md-7 order-md-2">
                         <h2 class="featurette-heading">Beneficios de la certificación</h2>
-                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                        <p class="lead">Ninguno en realidad, es meramente un examen para poder pasar la mejor materia de la carrera de sistemas computacionales.</p>
                     </div>
                     <div class="col-md-5 order-md-1">
 

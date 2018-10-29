@@ -22,11 +22,15 @@
             body{
                 background-color: #FEFDEF;
             }
+            span{
+                color: white;
+                padding-left:  20px;
+            }
         </style>
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark">
-            <img class="mb-2 ml-5" src="images/farolito.png" alt="" width=60" height="60" style="filter: invert(100%);">
+            <p style=" font-size: 13px;"><img class="mb-2 ml-5" src="images/farolito.png" alt="" width=60" height="60" style="filter: invert(100%);"><br><span>"Donde tu tiempo vale oro"</span></p>
             <p class="lead navbar-toggler"  data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation"  style="color: white; border: transparent;">CERTIFICACIONES EL FAROLITO</p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

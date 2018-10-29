@@ -4,6 +4,9 @@
     Author     : MD
 --%>
 
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
+<%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -28,6 +31,8 @@
         <title>Calificacion</title>
     </head>
     <body>
+        <%            Date fecha=new Date();
+            DateFormat Formato=new SimpleDateFormat("dd/MM/yyyy");%>
         <nav class="navbar navbar-dark bg-dark">
             <a href="index.jsp"><img class="mb-2 ml-5" src="images/farolito.png" alt="" width=60" height="60" style="filter: invert(100%);"></a>
             <p class="lead navbar-toggler"  data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation"  style="color: white; border: transparent;">CERTIFICACIONES EL FAROLITO</p>
@@ -85,7 +90,10 @@
         <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
             <div class="col-md-5 p-lg-5 mx-auto my-5">
                 <h1 class="display-4 font-weight-normal">LO SENTIMOS <%=session.getAttribute("usuario")%> NO APROBASTE</h1>
-                <p class="lead font-weight-normal"></p>
+                <p class="lead font-weight-normal">
+                    <canvas id="myCanvas" width="319" height="65" style="border:transparent;">
+                        Your browser does not support the HTML5 canvas tag.</canvas><br>
+                    <%out.println(Formato.format(fecha)); %></p>
                 <a class="btn btn-outline-secondary" href="index.jsp">Volver al incio</a>
             </div>
             <div class="product-device shadow-sm d-none d-md-block"></div>
@@ -130,6 +138,12 @@
                 </div>
             </div>
         </footer>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial black";
+            ctx.strokeText("Suerte la proxima", 10, 50);
+        </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

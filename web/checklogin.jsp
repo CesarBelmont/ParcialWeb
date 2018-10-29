@@ -22,7 +22,6 @@
 %>
 <%! ArrayList<Usuario> aux = new ArrayList();%>
 <%!boolean band = false;%>
-<%!int contador = 0;%>
 <%
     if (band == false) {
         aux.add(new Usuario("Ximena", "hola"));
@@ -42,7 +41,6 @@
         HttpSession sesionOk = request.getSession();
         sesionOk.setAttribute("usuario", usuario);
         sesionOk.setAttribute("lista", aux);
-        sesionOk.setAttribute("contador", contador);
 %>
 <jsp:forward page="index.jsp"/>
 <%

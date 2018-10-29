@@ -46,20 +46,27 @@
             }
         %>
         <br><br>
-        <form action="RegistroN.jsp" class="form-signin mx-auto" style="width:400px;" onsubmit="return validarPassword(this)">
+        <form action="registroN.jsp" class="form-signin mx-auto" style="width:400px;" onsubmit="return validarPassword(this)">
             <div class="text-center mb-4">
                 <img class="mb-4" src="images/farolito.png" alt="" width="72" height="72">
                 <h1 class="h3 mb-3 font-weight-normal">Registro de usuario</h1>
             </div>
             <div class="form-label-group">
-                <input name="cuenta" type="text" id="inputEmail" class="form-control" placeholder="Cuenta" required autofocus>
+                <input  name="nombre" type="text" id="nombre" class="form-control mt-2" placeholder="Nombre Usuario" required autofocus>
             </div>
             <div class="form-label-group">
-                <input  name="contrasena" type="password" id="inputPassword" class="form-control mt-2" placeholder="Contraseña" required>
+                <input  name="correo" type="email" id="mail" class="form-control mt-2" placeholder="Example@mail" required>
+            </div>
+            <div class="form-label-group mt-2">
+                <input name="cuenta" type="text" id="cuenta" class="form-control" placeholder="Cuenta" required>
             </div>
             <div class="form-label-group">
-                <input  name="contrasena2" type="password" id="inputPassword" class="form-control mt-2" placeholder="Confirmar contraseña" required>
+                <input  name="contrasena" type="password" id="contrasena" class="form-control mt-2" placeholder="Contraseña" required>
             </div>
+            <div class="form-label-group">
+                <input  name="contrasena2" type="password" id="contrasena2" class="form-control mt-2" placeholder="Confirmar contraseña" required>
+            </div>
+            
             <button class="btn btn-lg btn-primary btn-block mt-5" type="submit">Registrarme</button>
             <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
         </form>

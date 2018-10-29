@@ -65,6 +65,7 @@
             text2 = new String[36];
             text2 = file.leer(36);
             String[] Tdividido;
+            int numero=0;
             for (int i = 0; i < text.length; i++) {
                 Tdividido = archivo.dividir(text[i]);
                 for (int j = 0; j < 2; j++) {
@@ -106,7 +107,9 @@
             <div class="card-body">
                 <form action="Examen.jsp">
                     <h4 class="card-title">
-                        <%if (res.get(0) == 0) {%>
+                        <%
+                            numero=ThreadLocalRandom.current().nextInt(0, 35);
+                            if (res.get(0) == 0) {%>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(i))%>">
                             <label class="custom-control-label" for="customRadio1">
@@ -117,11 +120,13 @@
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="<%=mal.get(0)%>">
                             <label class="custom-control-label" for="customRadio1">
-                                <%out.println(mal.get(0));%>
+                                <%out.println(mal.get(numero));%>
                             </label>
                         </div>    
                         <%}%>
-                        <%if (res.get(1) == 0) {%>
+                        <%
+                            numero=ThreadLocalRandom.current().nextInt(0, 35);
+                            if (res.get(1) == 0) {%>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(i))%>">
                             <label class="custom-control-label" for="customRadio2">
@@ -132,11 +137,12 @@
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input"value="<%=mal.get(1)%>">
                             <label class="custom-control-label" for="customRadio2">
-                                <%out.println(mal.get(1));%>
+                                <%out.println(mal.get(numero));%>
                             </label>
                         </div>
                         <%}%>
-                        <%if (res.get(2) == 0) {%>
+                        <%  numero=ThreadLocalRandom.current().nextInt(0, 35);
+                            if (res.get(2) == 0) {%>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(i))%>">
                             <label class="custom-control-label" for="customRadio3">
@@ -147,11 +153,13 @@
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input"value="<%=mal.get(2)%>">
                             <label class="custom-control-label" for="customRadio3">
-                                <%out.println(mal.get(2));%>
+                                <%out.println(mal.get(numero));%>
                             </label>
                         </div>
                         <%}%>
-                        <%if (res.get(3) == 0) {%>
+                        <%
+                            numero=ThreadLocalRandom.current().nextInt(0, 35);
+                            if (res.get(3) == 0) {%>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input" value="<%=correctas.get(pre.get(i))%>">
 
@@ -163,7 +171,7 @@
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input"value="<%=mal.get(3)%>">
                             <label class="custom-control-label" for="customRadio4">
-                                <%out.println(mal.get(3));%>
+                                <%out.println(mal.get(numero));%>
                             </label>
                         </div>
                         <%}
@@ -184,8 +192,10 @@
                                 contador++;
                             }
                             if (i == 6) {
+                                
                                 session.setAttribute("contador", contador);
                                 i = 0;
+                                respuesta="";
                                 if (contador > 3) {
                                     response.sendRedirect("calificacionA.jsp");
                                     contador = 0;
@@ -193,6 +203,7 @@
                                     response.sendRedirect("calificacionR.jsp");
                                     contador = 0;
                                 }
+                                
                             }
                         %>
                     </h4>
