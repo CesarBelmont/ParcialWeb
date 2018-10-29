@@ -19,15 +19,16 @@
     if (request.getParameter("clave") != null) {
         clave = request.getParameter("clave");
     }
-    %>
-   <%! ArrayList<Usuario> aux=new ArrayList();%>
-   <%!boolean band=false;%>
-   <%
-    if(band==false){
-    aux.add(new Usuario("Ximena","hola"));
-    aux.add(new Usuario("GINA","admin"));
-    band=true;
-}
+%>
+<%! ArrayList<Usuario> aux = new ArrayList();%>
+<%!boolean band = false;%>
+<%!int contador = 0;%>
+<%
+    if (band == false) {
+        aux.add(new Usuario("Ximena", "hola"));
+        aux.add(new Usuario("GINA", "admin"));
+        band = true;
+    }
     //if(usuario.equals("Ximena")&& clave.equals("hola")){
     for (int i = 0; i < aux.size(); i++) {
         if (usuario.equals(aux.get(i).getNombre()) && clave.equals(aux.get(i).getClave())) {
@@ -41,6 +42,7 @@
         HttpSession sesionOk = request.getSession();
         sesionOk.setAttribute("usuario", usuario);
         sesionOk.setAttribute("lista", aux);
+        sesionOk.setAttribute("contador", contador);
 %>
 <jsp:forward page="index.jsp"/>
 <%

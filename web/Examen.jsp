@@ -6,7 +6,7 @@
 
 
 
-
+<%@page session="true"%>
 <%@page import="java.util.Collections"%>
 <%@page import="java.util.Vector"%>
 <%@page import="java.util.concurrent.ThreadLocalRandom"%>
@@ -43,7 +43,7 @@
         <%! boolean band = false;%>
         <%! Vector<Integer> res = new Vector<Integer>();%>
         <%! Vector<Integer> pre = new Vector<Integer>();%>
-        <%! int i = 0;%>
+        <%! int i = 0, contador = 0;%>
         <%
         } else {
             Map<Integer, String> preguntas = new TreeMap<Integer, String>();
@@ -97,7 +97,7 @@
                 band = true;
                 Collections.shuffle(pre);
             }
-           
+
         %>
         <div class="card">
             <h3 class="card-header">
@@ -167,7 +167,7 @@
                             </label>
                         </div>
                         <%}
-                            int contador=0;
+
                             String siguiente = "";
                             String respuesta = request.getParameter("customRadio");
                             if (i == 0) {
@@ -175,29 +175,26 @@
                             } else {
                                 siguiente = correctas.get(pre.get(i - 1));
                             }
-                            session.setAttribute("usr", siguiente);
-                            //out.println("correcta " + siguiente);
-
-
-                            // out.println("ciclo " + i);
-                            // out.println("Respuesta " + correctas.get(pre.get(i)));
-                            i++;
-                            //  out.println("Respuesta " + correctas.get(pre.get(i - 1)));
-                            //   out.println("Yo mande " + respuesta);
-                            out.println("respuesta actual " + siguiente);
-                            out.println("respuesta anterior " + respuesta);
-                            if (siguiente.equals(respuesta)) {
-                                out.println("bien");
-                                contador++;
-                            } else {
-                                out.println("mal");
+                            if (i > 11) {
+                                i = 0;
                             }
-                            if(i==5){
-                            response.sendRedirect("calificacion.jsp");
-                            session.setAttribute("contador", contador);
-}
+                            session.setAttribute("usr", siguiente);
+                            i++;
+                            if (siguiente.equals(respuesta)) {
+                                contador++;
+                            }
+                            if (i == 6) {
+                                session.setAttribute("contador", contador);
+                                i = 0;
+                                if (contador > 3) {
+                                    response.sendRedirect("calificacionA.jsp");
+                                    contador = 0;
+                                } else {
+                                    response.sendRedirect("calificacionR.jsp");
+                                    contador = 0;
+                                }
+                            }
                         %>
-
                     </h4>
                     <input type="submit" value="Siguente" class="btn btn-primary">
 
